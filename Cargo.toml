@@ -3,12 +3,17 @@ name = "pwr"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-seed = "0.5"
 wasm-bindgen = "0.2"
-web-sys = "0.3.65" 
+web-sys = "0.3.65"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
 
 [lib]
 crate-type = ["cdylib"]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ['-Os']
+extra-files = ["src/t/build/release.js"]
