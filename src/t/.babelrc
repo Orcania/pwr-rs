@@ -1,17 +1,13 @@
 {
   "presets": [
-    "@babel/preset-typescript",
     [
       "@babel/preset-env",
       {
         "targets": {
-          "node": "current" // or specific version e.g. "node": "10"
+          "node": "current"
         },
-        "modules": "commonjs" // This ensures we transpile ES modules to CommonJS
+        "modules": "commonjs"
       }
     ]
-  ],
-  "plugins": [
-    "@babel/plugin-transform-runtime" // This plugin enables the re-use of Babel's injected helper code to save on codesize.
   ]
 }
