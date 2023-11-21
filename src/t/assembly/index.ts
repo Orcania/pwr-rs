@@ -1,12 +1,4 @@
-export function fib(n: i32): i32 {
-  var a = 0, b = 1
-  if (n > 0) {
-    while (--n) {
-      let t = a + b
-      a = b
-      b = t
-    }
-    return b
-  }
-  return a
+export function fib(n: number): number {
+  if (n <= 1) return n;
+  return fib(n - 1) + fib(n - 2);
 }
